@@ -10,13 +10,14 @@ html{
 }
 
 .calculator{
-    border: 1px solid #ccc;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 5px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
+    background-color: rgb(235, 233, 233);
 }
 
 .calculator-screen{
@@ -35,8 +36,8 @@ button{
     height: 60px;
     background-color: #fff;
     border-radius: 3px;
-    border: 1px solid #c4c4c4;
-    background-color: transparent;
+    border: 1px solid #afafaf;
+    background-color: transparent white;
     font-size: 2rem;
     color: #333;
     background-image: linear-gradient(to bottom,transparent,transparent 50%, rgba(0,0,0,.04));
@@ -45,7 +46,7 @@ button{
 }
 
 button:hover{
-    background-color: #eaeaea;
+    background-color: #000000;
 }
 
 .operator{
@@ -63,15 +64,15 @@ button:hover{
 }
 
 .equal-sign{
-    background-color: #2e86c0;
-    border-color: #337cac;
+    background-color: #25a8ff;
+    border-color: #afafaf;
     color: #fff;
     height: 100%;
     grid-area: 2 / 4 / 6 / 5;
 }
 
 .equal-sign:hover{
-    background-color: #4e9ed4;
+    background-color: #4eb8ff;
 }
 
 .calculator-keys{
