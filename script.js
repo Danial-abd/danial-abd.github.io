@@ -39,7 +39,7 @@ function handleOperator(nextOperator) {
         const result = calculate(firstOperand, inputValue, operator);
         calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
         calculator.firstOperand = result;
-    }
+    } 
     calculator.waitingForSecondOperand = true;
     calculator.operator = nextOperator;
 }
@@ -53,8 +53,22 @@ function calculate(firstOperand, secondOperand, operator) {
         return firstOperand * secondOperand;
     } else if (operator === '/') {
         return firstOperand / secondOperand;
+    } else if (operator === '**') {
+        return firstOperand ** secondOperand;
     }
-    return secondOperand
+        return secondOperand;
+}
+
+function sin(){
+    calculator.displayValue = Math.sin(calculator.displayValue);
+}
+
+function cos(){
+    calculator.displayValue = Math.cos(calculator.displayValue);
+}
+
+function tan(){
+    calculator.displayValue = Math.tan(calculator.displayValue);
 }
 
 function resetCalculator(){
@@ -81,8 +95,18 @@ switch (value) {
     case '-':
     case '*':
     case '/':
+    case '**':
     case '=':
 handleOperator(value);
+break;
+    case 'sin':
+sin(value);
+break;
+    case 'tan':
+tan(value);
+break;
+    case 'cos':
+cos(value);
 break;
 case '.':
     inputDecimal(value);
